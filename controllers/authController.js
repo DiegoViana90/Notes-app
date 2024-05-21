@@ -11,11 +11,14 @@ const register = async (req, res) => {
       expiresIn: '1h',
     });
 
-    res.status(201).json({ token });
+    const message = `Usuário registrado com sucesso.`;
+
+    res.status(201).json({ message, token });
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
 };
+
 
 const login = async (req, res) => {
   const { email, password } = req.body;
@@ -31,7 +34,9 @@ const login = async (req, res) => {
       expiresIn: '1h',
     });
 
-    res.json({ token });
+    const message = `Login realizado com sucesso.`;
+
+    res.json({message, token });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
