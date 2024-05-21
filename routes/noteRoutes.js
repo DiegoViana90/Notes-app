@@ -7,6 +7,8 @@ const {
   deleteNote,
 } = require('../controllers/noteController');
 
+const authMiddleware = require('../middleware/authMiddleware');
+
 const router = express.Router();
 
 router.use(authMiddleware);
