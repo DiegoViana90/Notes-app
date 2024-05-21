@@ -19,7 +19,6 @@ const User = sequelize.define('User', {
   },
 });
 
-// Hash de senha antes de salvar
 User.beforeSave(async (user, options) => {
   if (user.changed('password')) {
     const salt = await bcrypt.genSalt(10);
