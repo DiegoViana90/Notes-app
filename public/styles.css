@@ -32,3 +32,13 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+form {
+    display: inline-block;
+    text-align: left;
+}
+
+form button {
+    margin-top: 10px;
+    margin-right: 10px;
+}
