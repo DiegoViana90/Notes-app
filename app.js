@@ -8,7 +8,7 @@ dotenv.config();
 const app = express();
 
 app.use(bodyParser.json());
-
+app.use(express.static('public'));
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/note', require('./routes/noteRoutes'));
 
