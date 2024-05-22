@@ -10,7 +10,7 @@ const app = express();
 app.use(bodyParser.json());
 
 app.use('/api/auth', require('./routes/authRoutes'));
-app.use('/api/notes', require('./routes/noteRoutes'));
+app.use('/api/note', require('./routes/noteRoutes'));
 
 const PORT = process.env.PORT || 3000;
 

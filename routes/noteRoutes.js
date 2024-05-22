@@ -13,10 +13,11 @@ const router = express.Router();
 
 router.use(authMiddleware);
 
-router.post('/', createNote);
-router.get('/', getNotes);
-router.get('/:id', getNoteById);
-router.put('/:id', updateNote);
-router.delete('/:id', deleteNote);
+router.post('/create', createNote);
+router.get('/getnotes', getNotes);
+router.get('/getById/:id', getNoteById);
+router.put('/update/:id', updateNote);
+router.delete('/delete/:id', deleteNote);
+
 
 module.exports = router;
